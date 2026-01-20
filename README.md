@@ -4,6 +4,7 @@ Create Database Project;
 use Project;
 ```
 
+```sql
 -- 1. Customers
 Create table Customers (
 CustomerID INT PRIMARY KEY,
@@ -11,15 +12,19 @@ Name VARCHAR(100),
 Phone VARCHAR(15),
 Email VARCHAR(100),
 JoinDate DATE);
+```
 
+```sql
 INSERT INTO Customers (CustomerID, Name, Phone, Email, JoinDate) VALUES
 (1, 'Soham Pandey', '9876543210', 'soham@example.com', '2024-01-10'),
 (2, 'Jay Tiwari', '8765432109', 'jay@example.com', '2024-02-15'),
 (3, 'Arnav Yadav', '7654321098', 'arnav1@example.com', '2024-03-01'),
 (4, 'AKASH Singh', '6543210987', 'aksh@example.com', '2024-04-05');
+```
 
+```sql
 Select * from Customers;
-
+```
 
 -- 2. Drivers
 
