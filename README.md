@@ -42,7 +42,11 @@ INSERT INTO Drivers (DriverID, Name, Phone, LicenseNumber, JoinDate, Rating) VAL
 (3, 'Riya P', '9345678901', 'DL23456789', '2024-01-20', 2.8),
 (4, 'Seema Kapoor', '9456789012', 'DL34567890', '2024-03-15', 4.0);
 
+
+````sql
+
 Select * from Drivers;
+```
 
 -- 3. Cabs
 
@@ -59,6 +63,7 @@ INSERT INTO Cabs (CabID, DriverID, CabType, PlateNumber) VALUES
 (3, 3, 'Sedan', 'KA01EF9012'),
 (4, 4, 'SUV', 'KA01GH3456');
 
+````sql
 Select * from Cabs;
 
 -- 4. Bookings
@@ -83,8 +88,10 @@ INSERT INTO Bookings (BookingID, CustomerID, CabID, BookingTime, TripStartTime, 
 (104, 3, 4, '2025-05-03 11:30:00', '2025-05-03 11:45:00', '2025-05-03 12:30:00', 'Mall', 'University', 'Completed'),
 (105, 4, 1, '2025-05-04 14:00:00', NULL, NULL, 'Airport', 'Downtown', 'Cancelled');
 
+````sql
 Select * from Bookings;
 
+```
 -- 5. TripDetails
 
 Create table TripDetails(
@@ -99,11 +106,13 @@ INSERT INTO TripDetails (TripID, BookingID, Distance, Fare, DriverRating) VALUES
 (1001, 101, 12.5, 250.00, 5.0),
 (1002, 103, 10.0, 200.00, 4.0),
 (1003, 104, 15.0, 300.00, 3.5);
+````sql
 
 Select * from TripDetails;
 
 -- Note: Bookings 102 and 105 are cancelled, so they don’t appear here.
 
+```
 
 -- 6. Feedback
 
@@ -118,10 +127,11 @@ INSERT INTO Feedback (FeedbackID, BookingID, CustomerFeedback, ReasonForCancella
 (501, 102, 'Cab was late, had to cancel.', 'Driver Delay'),
 (502, 105, 'Change of plans.', 'Customer Personal Reason');
 
+````sql
 Select * from Feedback;
  
  
- ##Identify customers who have completed the most bookings. What insights can you
+ ##. Identify customers who have completed the most bookings. What insights can you
 ##draw about their behavior?
 SELECT c.CustomerID, c.Name,
        COUNT(b.BookingID) AS completed_count
